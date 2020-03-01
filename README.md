@@ -14,6 +14,6 @@ You can use Paging along with LiveData and ViewModel to observe and update data 
 Assume you have more than 1000 items for your list that you are fetching from a backend server. Here are the cons if you are fetching everything at once.
 
 **Pre-Requisites:** 
-Retrofit [GitHub Pages](https://github.com/square/retrofit)
+Retrofit [LINK](https://github.com/square/retrofit)
 RecyclerView 
-ViewModel & LiveData [GitHub Pages](https://github.com/android/architecture-components-samples) 
+ViewModel & LiveData [LINK](https://github.com/android/architecture-components-samples) 
