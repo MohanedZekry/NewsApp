@@ -1,4 +1,5 @@
 # NewsApp
+Android Paging Library
 Paging is a part of the Android Jetpack and is used to load and display small amounts of data from the remote server. By doing so, it reduces the use of network bandwidth.
 Some of the advantages of Paging can be:
 
