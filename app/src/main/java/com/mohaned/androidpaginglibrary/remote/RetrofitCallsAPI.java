@@ -8,10 +8,10 @@ import retrofit2.http.Query;
 
 public interface RetrofitCallsAPI {
 
-    @GET("answer")
+    @GET("answers")
     Call<DataResponse> getAnswers(
             @Query("page") int page,
-            @Query("pagesize") int size,
+            @Query("pagesize") int pagesize,
             @Query("site") String site);
 
 }

@@ -20,7 +20,7 @@ public class ItemAdapter extends PagedListAdapter<Item, ItemAdapter.ItemViewHold
 
     Context mContext;
 
-    protected ItemAdapter(Context mContext) {
+    public ItemAdapter(Context mContext) {
         super(diffCallback);
         this.mContext = mContext;
     }

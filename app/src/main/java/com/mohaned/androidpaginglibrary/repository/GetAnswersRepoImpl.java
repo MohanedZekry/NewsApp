@@ -1,11 +1,9 @@
 package com.mohaned.androidpaginglibrary.repository;
 
-import android.content.Context;
-
 import androidx.lifecycle.MutableLiveData;
-
 import com.mohaned.androidpaginglibrary.model.DataResponse;
 import com.mohaned.androidpaginglibrary.remote.RetrofitClient;
+import com.mohaned.androidpaginglibrary.utils.Constants;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -14,16 +12,14 @@ import retrofit2.Response;
 public class GetAnswersRepoImpl implements GetAnswerRepo {
     private MutableLiveData<DataResponse> dataResponseMutableLiveData;
     static GetAnswersRepoImpl instance;
-    private Context mContext;
 
-    public static GetAnswersRepoImpl getInstance(Context mContext) {
+    public static GetAnswersRepoImpl getInstance() {
         if (instance == null)
-            instance = new GetAnswersRepoImpl(mContext);
+            instance = new GetAnswersRepoImpl();
         return instance;
     }
 
-    private GetAnswersRepoImpl(Context mContext){
-        this.mContext = mContext;
+    private GetAnswersRepoImpl(){
         dataResponseMutableLiveData = new MutableLiveData<>();
     }
 
@@ -35,9 +31,14 @@ public class GetAnswersRepoImpl implements GetAnswerRepo {
 
     @Override
     public void loadAnswers() {
-        RetrofitClient.getInsance().getAnswers().enqueue(new Callback<DataResponse>() {
+        RetrofitClient.getInsance().getAnswers(Constants.FIRST_PAGE, Constants.PAGE_SIZE, Constants.SITE_NAME)
+                .enqueue(new Callback<DataResponse>() {
             @Override
             public void onResponse(Call<DataResponse> call, Response<DataResponse> response) {
+                if (response.body() != null) {
+//                    callback.onResult(response.body().getItems(), null, FIRST_PAGE + 1);
+                }
+
                 dataResponseMutableLiveData.setValue(response.body());
             }
 
