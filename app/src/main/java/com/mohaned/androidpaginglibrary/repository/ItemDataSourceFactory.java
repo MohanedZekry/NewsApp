@@ -1,4 +1,4 @@
-package com.mohaned.androidpaginglibrary.adapter;
+package com.mohaned.androidpaginglibrary.repository;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.paging.DataSource;

@@ -1,4 +1,4 @@
-package com.mohaned.androidpaginglibrary.adapter;
+package com.mohaned.androidpaginglibrary.repository;
 
 import androidx.annotation.NonNull;
 import androidx.paging.PageKeyedDataSource;
@@ -6,7 +6,6 @@ import com.mohaned.androidpaginglibrary.model.DataResponse;
 import com.mohaned.androidpaginglibrary.model.Item;
 import com.mohaned.androidpaginglibrary.remote.RetrofitClient;
 import com.mohaned.androidpaginglibrary.utils.Constants;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

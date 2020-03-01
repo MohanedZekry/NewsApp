@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PageKeyedDataSource;
 import androidx.paging.PagedList;
-import com.mohaned.androidpaginglibrary.adapter.ItemDataSourceFactory;
+import com.mohaned.androidpaginglibrary.repository.ItemDataSourceFactory;
 import com.mohaned.androidpaginglibrary.model.Item;
 import com.mohaned.androidpaginglibrary.utils.Constants;
 
